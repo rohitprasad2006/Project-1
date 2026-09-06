@@ -82,6 +82,14 @@
 
       .spark { color: var(--aqua); }
 
+      nav { display: flex; gap: .65rem; justify-content: center; margin: 0 0 2.3rem; }
+      nav a {
+        border: 1px solid rgba(255,255,255,.2); border-radius: 999px; color: var(--ink);
+        font-size: .85rem; font-weight: 700; padding: .55rem .9rem; text-decoration: none;
+        transition: background .2s ease, transform .2s ease;
+      }
+      nav a:hover, nav a[aria-current="page"] { background: rgba(255,255,255,.16); transform: translateY(-2px); }
+
       @keyframes drift {
         from { transform: translateY(-7px) rotate(-.35deg); }
         to { transform: translateY(7px) rotate(.35deg); }
@@ -94,6 +102,11 @@
   </head>
   <body>
     <main class="glow">
+      <nav aria-label="Main navigation">
+        <a href="hello-world.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <p class="eyebrow">A friendly beginning</p>
       <h1>Hello,<br />World<span class="spark">!</span></h1>
       <p>A tiny message with a little stardust—ready for whatever you build next.</p>
